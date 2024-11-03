@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Health - Kesehatan Digital</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">E-Health</div>
+            <ul class="nav-links">
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#statistics">Statistik</a></li>
+                <li><a href="#profile">Profil</a></li>
+                <li><a href="#settings">Pengaturan</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="dashboard">
+        <h1>Dashboard Kesehatan Anda</h1>
+        
+        <div class="dashboard-grid">
+            <div class="health-card" id="steps">
+                <h3>Langkah Harian</h3>
+                <p class="count">0</p>
+                <p>Target: 10,000 langkah</p>
+            </div>
+
+            <div class="health-card" id="heart-rate">
+                <h3>Detak Jantung</h3>
+                <p class="count">0</p>
+                <p>BPM</p>
+            </div>
+
+            <div class="health-card" id="sleep">
+                <h3>Waktu Tidur</h3>
+                <p class="count">0</p>
+                <p>jam</p>
+            </div>
+        </div>
+
+        <div class="health-chart">
+            <h2>Grafik Aktivitas Mingguan</h2>
+            <canvas id="activityChart"></canvas>
+        </div>
+
+        <div class="health-form">
+            <h2>Input Data Kesehatan</h2>
+            <form id="healthForm">
+                <div class="form-group">
+                    <label for="steps">Jumlah Langkah</label>
+                    <input type="number" id="steps-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="heart-rate">Detak Jantung (BPM)</label>
+                    <input type="number" id="heart-rate-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="sleep">Waktu Tidur (Jam)</label>
+                    <input type="number" id="sleep-input" required>
+                </div>
+                <button type="submit" class="btn">Simpan Data</button>
+            </form>
+        </div>
+    </main>
+
+    <div class="notification" id="notification">
+        Data berhasil disimpan!
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
